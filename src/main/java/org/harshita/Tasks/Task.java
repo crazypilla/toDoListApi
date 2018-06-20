@@ -9,13 +9,7 @@ public class Task {
     Date deadLine;
     int categoryId;
 
-    public int getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
+    public Task(){}
 
     public Task(int id, String name, String desc, Date deadLine, int categoryId) {
         this.id = id;
@@ -24,6 +18,15 @@ public class Task {
         this.deadLine = deadLine;
         this.categoryId=categoryId;
     }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
 
     public int getId() {
         return id;

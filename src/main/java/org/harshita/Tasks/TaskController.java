@@ -18,6 +18,14 @@ public class TaskController {
         return taskService.getTask(id);
     }
 
+    @RequestMapping("/categories/{id}/tasks")
+    public List<Task> getTasksByCategory(@PathVariable int id)
+    {  // int idd=Integer.parseInt(id);
+        return taskService.getTaskByCategory(id);
+    }
+
+
+
     @RequestMapping(method=RequestMethod.POST,value="/tasks")
     public void addTopic(@RequestBody Task cat)
     {

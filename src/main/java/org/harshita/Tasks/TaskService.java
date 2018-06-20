@@ -24,6 +24,20 @@ public class TaskService {
         return tasks.stream().filter(c->c.getId()==id).findFirst().get();
     }
 
+    public static List<Task> getTaskByCategory(int categoryId) {
+        List<Task> listOfTasks = new ArrayList<>();
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getCategoryId() == categoryId) {
+                listOfTasks.add(tasks.get(i));
+            }
+
+        }
+        return listOfTasks;
+
+    }
+
+
+
     public static void addTask(Task cat){
         // return categories;
         //return categories.stream().filter(c->c.getId()==id).findFirst().get();
